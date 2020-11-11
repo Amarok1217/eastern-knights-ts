@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "compression-webpack-plugin": "^6.1.0",
     "core-js": "^2.6.11",
+    "cube-ui": "^1.12.44",
+    "html-webpack-externals-plugin": "^3.8.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
@@ -22,7 +25,16 @@
     "@vue/cli-service": "^3.12.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "typescript": "^3.4.3",
+    "vue-cli-plugin-cube-ui": "^0.2.5",
     "vue-template-compiler": "^2.6.10"
+  },
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/src/modules/${member}",
+      "kebabCase": true
+    }
   }
 }
