@@ -6,7 +6,7 @@ import 'antd-mobile/dist/antd-mobile.css';
 function MobileHome() {
   return (
     <div className='mobileHome'>
-      <Button>Start</Button>
+      {/* <Button>Start</Button> */}
       <section className='demo'>mobile</section>
     </div>
   )
