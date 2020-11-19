@@ -6,9 +6,9 @@ export const wave = {
   soulSpiller: '噬魂者',
   coliseum: '竞技场',
   adventOfDecay: '潮腐',
-  illythia: '伊利西亚'
+  illythia: '伊利西亚',
   // covenantOfShadows: '暗影契约'
-}
+};
 export const race = {
   all: '全部种族',
   human: '人类',
@@ -35,8 +35,8 @@ export const race = {
   moose: '麋鹿',
   centaur: '半人马',
   vogyrr: '巨型吸血鬼',
-  unknown: '未知'
-}
+  unknown: '未知',
+};
 export const role = {
   all: '全部职业',
   leader: '领袖',
@@ -73,8 +73,8 @@ export const role = {
   stableLord: '厩主',
   princess: '公主',
   bodyguard: '血肉守卫',
-  god: '神'
-}
+  god: '神',
+};
 export const faction = {
   all: '全部阵营',
   armyOfLeodysseus: '铁狮军团',
@@ -87,29 +87,29 @@ export const faction = {
   theCircleOfPoxxus: '邪魔密社',
   theHouseOfTheNobleBear: '巨熊战团',
   theSonsOfTheRedStar: '赤星之子',
-  none: '无阵营'
-}
-export const getArr = (obj) => {
-  let result = []
+  none: '无阵营',
+};
+export const getArr = (obj: object) => {
+  const result = [];
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
-      const element = obj[key]
+      const element: string = (obj as any)[key];
       result.push({
         label: element,
         text: element,
-        value: key
-      })
+        value: key,
+      });
     }
   }
-  return result
-}
-export const getKey = (value, obj) => {
+  return result;
+};
+export const getKey = (value: string, obj: object) => {
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
-      const element = obj[key]
+      const element = (obj as any)[key];
       if (value === element) {
-        return key
+        return key;
       }
     }
   }
-}
+};
